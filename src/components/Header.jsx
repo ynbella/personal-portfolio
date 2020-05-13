@@ -8,7 +8,15 @@ class Header extends Component {
       <header className="header-container">
         <div className="inner-header-container">
           <div className="logo-container">
-            <Link to="/" className="logo">
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="hero"
+              className="logo"
+            >
               YB
             </Link>
           </div>

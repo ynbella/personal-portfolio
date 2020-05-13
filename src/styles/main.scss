@@ -91,10 +91,12 @@ $sidebar-item-link-color: $black;
   margin: 0px auto;
 }
 .sidebar-item {
+  @include aku-type(xsmall);
   list-style-type: none;
   text-decoration: none;
   writing-mode: vertical-rl;
   margin: 2vw auto;
+  font-family: $f-mono;
 }
 .sidebar-link {
   text-align: center;
@@ -124,17 +126,30 @@ $sidebar-item-link-color: $black;
   align-items: center;
 }
 
-#about {
-  color: blue;
-  h1 {
-    color: green;
-    @include aku-type(large);
-  }
-  h2 {
-    @include aku-type(small);
-  }
-  h3 {
-  }
-  p {
+#hero {
+  .hero-section {
+    width: $w-wide;
+    h1 {
+      @include aku-type(small);
+      font-weight: $f-weight-normal;
+      padding: 10px 0px;
+    }
+    h2 {
+      @include aku-type(xxlarge);
+      font-weight: $f-weight-heavy;
+      padding: 10px 0px;
+    }
+    h3 {
+      @include aku-type(xxlarge);
+      font-weight: $f-weight-heavy;
+      padding: 10px 0px;
+    }
+    p {
+      @include aku-type(small);
+      font-weight: $f-weight-light;
+      padding: 20px 0px;
+      max-width: $w-regular;
+      width: 60%;
+    }
   }
 }

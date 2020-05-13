@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "./components/Layout";
 
 // Import Sections
+import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import BackgroundSection from "./sections/BackgroundSection";
 import ProjectsSection from "./sections/ProjectsSection";
@@ -15,6 +16,7 @@ import "./styles/main.scss";
 function App() {
   return (
     <Layout>
+      <HeroSection />
       <AboutSection />
       <BackgroundSection />
       <ProjectsSection />
