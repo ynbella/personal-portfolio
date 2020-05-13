@@ -1,0 +1,118 @@
+$sidebar-container-width: 40px;
+$header-container-height: 80px;
+
+// Colors
+$white: #fff;
+$black: #000;
+$maroon: #83333e;
+$soft-white: #f2f4f5;
+
+$bg-color: #0a192f;
+$accent-color: #64ffda;
+$sidebar-icon-link-color: blue;
+
+// #region Header
+.header-container {
+  height: $header-container-height;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+
+  .inner-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-container-height;
+    .logo-container {
+      .logo {
+        margin: 0 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: $maroon;
+      }
+    }
+    .nav-container {
+      .nav-item {
+        margin: 0 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: black;
+      }
+    }
+  }
+}
+
+// #region Navbar
+
+// #endregion
+
+// #endregion
+
+// region Sidebars
+.sidebar-container {
+  width: $sidebar-container-width;
+  height: 100%;
+  align-items: center;
+  margin: auto;
+  position: fixed;
+}
+.left-sidebar-container {
+  left: 0;
+  right: auto;
+}
+.right-sidebar-container {
+  left: auto;
+  right: 0;
+}
+.sidebar-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-direction: column;
+}
+.sidebar-list::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  background-color: rgb(168, 178, 209);
+  margin: 0px auto;
+}
+.sidebar-item {
+  list-style-type: none;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  margin: 2vw auto;
+}
+.sidebar-link {
+  text-align: center;
+}
+.sidebar-link:link,
+.sidebar-link:visited {
+  color: $sidebar-icon-link-color;
+}
+.sidebar-link:hover {
+  color: blue;
+}
+
+//endregion
+
+/* Style page content */
+.content-container {
+  margin-left: $sidebar-container-width;
+  margin-right: $sidebar-container-width;
+}
+
+.section-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
