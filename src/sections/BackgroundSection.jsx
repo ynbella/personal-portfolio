@@ -5,7 +5,7 @@ import Section from "../components/Section";
 class BackgroundSection extends Component {
   render() {
     return (
-      <Section id="about">
+      <Section id="background" className="background-section">
         <div>Background Section</div>
       </Section>
     );

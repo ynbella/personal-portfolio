@@ -5,8 +5,8 @@ import Section from "../components/Section";
 class ContactSection extends Component {
   render() {
     return (
-      <Section id="contact">
-        <div>Contactgit Section</div>
+      <Section id="contact" className="contact-section">
+        <div>Contact Section</div>
       </Section>
     );
   }

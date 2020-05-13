@@ -1,0 +1,12 @@
+@import "../variables.scss";
+:root {
+  font-size: $f-lineheight;
+  font-family: $f-family;
+  font-weight: $f-weight-normal;
+  font-style: $f-style;
+}
+@media (min-width: 500px) {
+  :root {
+    font-size: 32px;
+  }
+}

@@ -1,3 +1,8 @@
+@import "typography/type.scss";
+@import "typography/settings.scss";
+@import "reset.scss";
+@import "variables.scss";
+
 $sidebar-container-width: 40px;
 $header-container-height: 80px;
 
@@ -9,7 +14,8 @@ $soft-white: #f2f4f5;
 
 $bg-color: #0a192f;
 $accent-color: #64ffda;
-$sidebar-icon-link-color: blue;
+$sidebar-item-hover-color: $accent-color;
+$sidebar-item-link-color: $black;
 
 // #region Header
 .header-container {
@@ -92,13 +98,14 @@ $sidebar-icon-link-color: blue;
 }
 .sidebar-link {
   text-align: center;
+  text-decoration: none;
 }
 .sidebar-link:link,
 .sidebar-link:visited {
-  color: $sidebar-icon-link-color;
+  color: $sidebar-item-link-color;
 }
 .sidebar-link:hover {
-  color: blue;
+  color: $sidebar-item-hover-color;
 }
 
 //endregion
@@ -115,4 +122,19 @@ $sidebar-icon-link-color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#about {
+  color: blue;
+  h1 {
+    color: green;
+    @include aku-type(large);
+  }
+  h2 {
+    @include aku-type(small);
+  }
+  h3 {
+  }
+  p {
+  }
 }

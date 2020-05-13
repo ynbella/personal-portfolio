@@ -1,28 +1,62 @@
 import React, { Component } from "react";
 
+import { Link } from "react-scroll";
+
 class Header extends Component {
   render() {
     return (
       <header className="header-container">
         <div className="inner-header-container">
           <div className="logo-container">
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
               YB
-            </a>
+            </Link>
           </div>
           <nav className="nav-container">
-            <a href="#about" className="nav-item">
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="about"
+              className="nav-item"
+            >
               About
-            </a>
-            <a href="#/background" className="nav-item">
+            </Link>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="background"
+              className="nav-item"
+            >
               Background
-            </a>
-            <a href="#/projects" className="nav-item">
+            </Link>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="projects"
+              className="nav-item"
+            >
               Projects
-            </a>
-            <a href="#contact" className="nav-item">
+            </Link>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="contact"
+              className="nav-item"
+            >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
