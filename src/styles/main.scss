@@ -24,6 +24,8 @@ $sidebar-item-link-color: $black;
   position: fixed;
   top: 0px;
   z-index: 10;
+  transition: top 0.3s;
+  background-color: $c-bg;
 
   .inner-header-container {
     display: flex;
@@ -36,7 +38,7 @@ $sidebar-item-link-color: $black;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 0.75rem;
-        color: $maroon;
+        color: $black;
       }
     }
     .nav-container {
@@ -49,6 +51,9 @@ $sidebar-item-link-color: $black;
       }
     }
   }
+}
+.header-container-hidden {
+  top: -$header-container-height;
 }
 
 // #region Navbar

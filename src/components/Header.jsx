@@ -1,11 +1,46 @@
 import React, { Component } from "react";
+import classnames from "classnames";
 
 import { Link } from "react-scroll";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      prevScrollpos: window.pageYOffset,
+      visible: true,
+    };
+  }
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  // Remove the event listener when the component is unmount.
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  // Hide or show the menu.
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible,
+    });
+  };
+
   render() {
     return (
-      <header className="header-container">
+      <header
+        className={classnames("header-container", {
+          "header-container-hidden": !this.state.visible,
+        })}
+      >
         <div className="inner-header-container">
           <div className="logo-container">
             <Link
