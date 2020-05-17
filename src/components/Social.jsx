@@ -5,7 +5,7 @@ import { ReactComponent as LinkedInIcon } from "../images/linkedin.svg";
 import { ReactComponent as CodepenIcon } from "../images/codepen.svg";
 import { ReactComponent as TwitterIcon } from "../images/twitter.svg";
 
-class SocialSidebar extends Component {
+class Social extends Component {
   render() {
     return (
       <div class="sidebar-container left-sidebar-container">
@@ -56,4 +56,4 @@ class SocialSidebar extends Component {
   }
 }
 
-export default SocialSidebar;
+export default Social;

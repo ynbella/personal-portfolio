@@ -1,26 +1,26 @@
 import React from "react";
 
-// Import Components
 import Layout from "./components/Layout";
 
-// Import Sections
 import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
+import AboutSection from "./sections/AboutSection.jsx";
 import BackgroundSection from "./sections/BackgroundSection";
-import ProjectsSection from "./sections/ProjectsSection";
+import ProjectSection from "./sections/ProjectsSection";
 import ContactSection from "./sections/ContactSection";
 
-// Import Styles
-import "./styles/main.scss";
+import "./styles/reset.scss";
+import "./styles/color.scss";
+import "./styles/layout.scss";
+import "./styles/type.scss";
 
 function App() {
   return (
     <Layout>
-      <HeroSection />
-      <AboutSection />
-      <BackgroundSection />
-      <ProjectsSection />
-      <ContactSection />
+      <HeroSection title="Hero" id="hero" />
+      <AboutSection title="About" id="about" />
+      <BackgroundSection title="Background" id="background" />
+      <ProjectSection title="Projects" id="projects" />
+      <ContactSection title="Contact" id="contact" />
     </Layout>
   );
 }

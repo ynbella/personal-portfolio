@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+html {
+  background-color: $background-color;
+}
+
+.header-container {
+  background-color: $header-background-color;
+  .header-logo {
+  }
+
+  .nav-list {
+    background-color: $header-background-color;
+    .nav-item {
+      .nav-link {
+      }
+    }
+  }
+}
+
+.sidebar-link:link,
+.sidebar-link:visited {
+  color: $sidebar-item-link-color;
+}
+.sidebar-link:hover {
+  color: $sidebar-item-hover-color;
+}

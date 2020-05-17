@@ -5,7 +5,7 @@ import Section from "../components/Section";
 class HeroSection extends Component {
   render() {
     return (
-      <Section id="hero">
+      <Section id="hero" disp="We did it boys">
         <div className="hero-section">
           <h1>Hi, my name is</h1>
           <h2>Youness Bella.</h2>

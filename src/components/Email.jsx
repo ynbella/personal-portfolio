@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class EmailSidebar extends Component {
+export class Email extends Component {
   render() {
     return (
       <div class="sidebar-container right-sidebar-container">
@@ -16,4 +16,4 @@ export class EmailSidebar extends Component {
   }
 }
 
-export default EmailSidebar;
+export default Email;

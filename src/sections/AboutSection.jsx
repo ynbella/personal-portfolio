@@ -4,7 +4,11 @@ import Section from "../components/Section";
 
 class AboutSection extends Component {
   render() {
-    return <Section id="about">About section</Section>;
+    return (
+      <Section id="about" name="meme">
+        About section
+      </Section>
+    );
   }
 }
 

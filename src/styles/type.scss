@@ -1,0 +1,125 @@
+@import "variables.scss";
+
+:root {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 25em) {
+  :root {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+:root {
+  font-size: $f-lineheight;
+  font-family: $f-family;
+  font-weight: $f-weight-normal;
+  font-style: $f-style;
+}
+
+@mixin aku-type($size: "normal") {
+  $baseSize: 1rem; // Base Font Size 15/25
+  $baseRatio: $xs-font-scale, $s-font-scale, 1, $m-font-scale, $l-font-scale,
+    $xl-font-scale, $xxl-font-scale;
+
+  // X-Small Font Size
+  @if ($size == "xsmall") {
+    font-size: $baseSize * nth($baseRatio, 1);
+    font-family: inherit;
+    //line-height: 1rem;
+  }
+  // Small Font Size
+  @if ($size == "small") {
+    font-size: $baseSize * nth($baseRatio, 2);
+    font-family: inherit;
+    //line-height: 1rem;
+  }
+  // Normal Font Size
+  @if ($size == "normal") {
+    font-size: $baseSize * nth($baseRatio, 3);
+    font-family: inherit;
+    //line-height: 1rem;
+  }
+  // Medium Font Size
+  @if ($size == "medium") {
+    font-size: $baseSize * nth($baseRatio, 4);
+    font-family: inherit;
+    //line-height: 1rem;
+  }
+  // Large Font Size
+  @if ($size == "large") {
+    font-size: $baseSize * nth($baseRatio, 5);
+    font-family: inherit;
+    //line-height: 2rem;
+  }
+  // X-Large Font Size
+  @if ($size == "xlarge") {
+    font-size: $baseSize * nth($baseRatio, 6);
+    font-family: inherit;
+    //line-height: 2rem;
+  }
+  // XX-Large Font Size
+  @if ($size == "xxlarge") {
+    font-size: $baseSize * nth($baseRatio, 7);
+    font-family: inherit;
+    //line-height: 2rem;
+  }
+}
+
+// #region Header
+
+.header-container {
+  .nav-list {
+    .nav-item {
+      @include aku-type(xsmall);
+
+      list-style: none;
+
+      .nav-link {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// #endregion
+
+// #region Sidebars
+
+.sidebar-item {
+  @include aku-type(xsmall);
+  list-style-type: none;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-family: $f-mono;
+}
+
+// #endregion
+
+// #region Sections
+
+// #region Hero
+#hero {
+  .hero-section {
+    h1 {
+      @include aku-type(small);
+      font-weight: $f-weight-normal;
+    }
+    h2 {
+      @include aku-type(xxlarge);
+      font-weight: $f-weight-heavy;
+    }
+    h3 {
+      @include aku-type(xxlarge);
+      font-weight: $f-weight-heavy;
+    }
+    p {
+      @include aku-type(small);
+      font-weight: $f-weight-light;
+    }
+  }
+}
+
+// #region
+
+// #endregion
